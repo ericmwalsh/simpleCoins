@@ -1,0 +1,175 @@
+Script started on Sun Apr 20 19:59:32 2014
+[?1034hbash-3.2$ ls
+HW2.zip	HW2Log
+bash-3.2$ tar xfv Hw2.zip
+x bestMain.cc
+x betterMain.cc
+x Coins.cc
+x Coins.h
+x main.cc
+x Makefile
+bash-3.2$ ls
+Coins.cc	Coins.h		HW2.zip		HW2Log		Makefile	bestMain.cc	betterMain.cc	main.cc
+bash-3.2$ make
+g++ -c Coins.cc
+g++ Coins.o main.cc -o main
+g++ Coins.o betterMain.cc -o betterMain
+g++ Coins.o bestMain.cc -o bestMain
+bash-3.2$ ls
+Coins.cc	Coins.h		Coins.o		HW2.zip		HW2Log		Makefile	bestMain	bestMain.cc	betterMain	betterMain.cc	main		main.cc
+bash-3.2$ make
+make: Nothing to be done for `all'.
+bash-3.2$ touch main.cc
+bash-3.2$ make
+g++ Coins.o main.cc -o main
+bash-3.2$ make
+make: Nothing to be done for `all'.
+bash-3.2$ touch Coins.cc
+bash-3.2$ make
+g++ -c Coins.cc
+g++ Coins.o main.cc -o main
+g++ Coins.o betterMain.cc -o betterMain
+g++ Coins.o bestMain.cc -o bestMain
+bash-3.2$ make
+make: Nothing to be done for `all'.
+bash-3.2$ ls
+Coins.cc	Coins.h		Coins.o		HW2.zip		HW2Log		Makefile	bestMain	bestMain.cc	betterMain	betterMain.cc	main		main.cc
+bash-3.2$ ./main
+I started with Coins... Amount: 2750 , Quarters: 100 , Dimes: 10 , Nickels: 10 , Pennies: 100 in my pocket.
+I bought a candy bar for 482 cents using Coins... Amount: 2268 , Quarters: 81 , Dimes: 10 , Nickels: 9 , Pennies: 98
+I have Coins... Amount: 2268 , Quarters: 81 , Dimes: 10 , Nickels: 9 , Pennies: 98 left in my pocket.
+bash-3.2$ ./betterMain
+I started with Coins... Amount: 193 , Quarters: 5 , Dimes: 3 , Nickels: 6 , Pennies: 8 in my pocket.
+I bought a bag of chips for 68 cents.
+I currently have Coins... Amount: 125 , Quarters: 3 , Dimes: 2 , Nickels: 5 , Pennies: 5 left in my pocket.
+I also currently have Coins... Amount: 2050 , Quarters: 50 , Dimes: 50 , Nickels: 50 , Pennies: 50 left in my piggy bank.
+I am now transferring 749 cents from my piggy bank to pocket.
+I currently have Coins... Amount: 874 , Quarters: 32 , Dimes: 4 , Nickels: 5 , Pennies: 9 left in my pocket.
+I also currently have Coins... Amount: 1301 , Quarters: 21 , Dimes: 48 , Nickels: 50 , Pennies: 46 left in my piggy bank.
+I then started cleaning around the house and found Coins... Amount: 625 , Quarters: 13 , Dimes: 17 , Nickels: 21 , Pennies: 25 in the sofa.
+After depositing that money in my piggy bank, I now have Coins... Amount: 1926 , Quarters: 34 , Dimes: 65 , Nickels: 71 , Pennies: 71
+bash-3.2$ ./bestMain
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 0 , Quarters: 0 , Dimes: 0 , Nickels: 0 , Pennies: 0
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: d
+How many quarters are you depositing? 10
+How many dimess are you depositing? 8
+How many nickels are you depositing? 7
+How many penniess are you depositing? 3
+You are depositing these Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: e
+How much money will you be withdrawing? 400
+Unable to extract change: insufficient funds available.
+After extracting your balance is Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: e
+How much money will you be withdrawing? 69
+Unable to make change: the funds are available however there are insufficient coins for change.
+After extracting your balance is Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 368 , Quarters: 10 , Dimes: 8 , Nickels: 7 , Pennies: 3
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: e
+How much money will you be withdrawing? 172
+After extracting your balance is Coins... Amount: 196 , Quarters: 4 , Dimes: 6 , Nickels: 7 , Pennies: 1
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 196 , Quarters: 4 , Dimes: 6 , Nickels: 7 , Pennies: 1
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: e
+How much money will you be withdrawing? 76
+After extracting your balance is Coins... Amount: 120 , Quarters: 1 , Dimes: 6 , Nickels: 7 , Pennies: 0
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 120 , Quarters: 1 , Dimes: 6 , Nickels: 7 , Pennies: 0
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: d
+How many quarters are you depositing? 1
+How many dimess are you depositing? 3
+How many nickels are you depositing? 5
+How many penniess are you depositing? 7
+You are depositing these Coins... Amount: 87 , Quarters: 1 , Dimes: 3 , Nickels: 5 , Pennies: 7
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 207 , Quarters: 2 , Dimes: 9 , Nickels: 12 , Pennies: 7
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: e
+How much money will you be withdrawing? 193
+After extracting your balance is Coins... Amount: 14 , Quarters: 0 , Dimes: 0 , Nickels: 2 , Pennies: 4
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 14 , Quarters: 0 , Dimes: 0 , Nickels: 2 , Pennies: 4
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: p
+Coins... Amount: 14 , Quarters: 0 , Dimes: 0 , Nickels: 2 , Pennies: 4
+
+Welcome to the Coins Main Menu:
+Your current balance: Coins... Amount: 14 , Quarters: 0 , Dimes: 0 , Nickels: 2 , Pennies: 4
+What would you like to do?
+D - Deposit change...
+E - Extract change...
+P - Print your balance...
+Q - Quit the program
+
+Type your input: q
+Exiting coins program...
+bash-3.2$ ls
+Coins.cc	Coins.h		Coins.o		HW2.zip		HW2Log		Makefile	bestMain	bestMain.cc	betterMain	betterMain.cc	main		main.cc
+bash-3.2$ make clean
+rm Coins.o main betterMain bestMain
+bash-3.2$ ls
+Coins.cc	Coins.h		HW2.zip		HW2Log		Makefile	bestMain.cc	betterMain.cc	main.cc
+bash-3.2$ exit
+exit
+
+Script done on Sun Apr 20 20:01:58 2014
